@@ -5,7 +5,7 @@ on:
   - main 
 jobs:
   demo_job:
-   runs-on: runner2
+   runs-on: self-hosted
    steps:
     - uses: actions/checkout@v3
     - name: run a one-line script
