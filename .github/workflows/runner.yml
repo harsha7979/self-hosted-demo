@@ -1,0 +1,18 @@
+name: first demo 
+on:
+ push:
+  branches: 
+  - main 
+jobs:
+  demo_job:
+   runs-on: runner2
+   steps:
+    - uses: actions/checkout@v3
+    - name: run a one-line script
+      run: sh ./new.sh
+    - name: run multiple-line script
+      run: | 
+          echo Nothing to show here..
+          echo what is in that folder?
+          ls -a
+   
